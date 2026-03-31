@@ -12,7 +12,7 @@ async function main() {
     await prisma.category.deleteMany();
     await prisma.project.deleteMany();
     await prisma.people.deleteMany();
-    await prisma.user.deleteMany();
+    await prisma.user.deleteMany(); 
 
     console.log('Cleared existing data.');
 

@@ -1,5 +1,7 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+  engineType      = "library"
 }
 
 datasource db {
@@ -80,6 +82,7 @@ model Project {
   ProjectDetail     String?   @db.VarChar(500)
   Description       String?   @db.VarChar(500)
   UserID            Int
+  Budget            Decimal?
   IsActive          Boolean?  @default(true)
   Created           DateTime  @default(now())
   Modified          DateTime  @updatedAt
